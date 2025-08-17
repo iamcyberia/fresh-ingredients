@@ -1,0 +1,31 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "cases": [
+      {
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/ender_pearl"
+        },
+        "when": [
+          "gui",
+          "fixed"
+        ]
+      },
+      {
+        "when": [
+          "ground"
+        ],
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/ender_pearl_throw"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/ender_pearl_3d"
+    },
+    "property": "minecraft:display_context"
+  }
+}
