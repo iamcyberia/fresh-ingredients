@@ -23,7 +23,7 @@
               ],
               "model": {
                 "type": "minecraft:model",
-                "model": "minecraft:item/plated_foods/plated_pufferfish_3d"
+                "model": "minecraft:item/named_variants/plated_pufferfish_3d"
               }
             }
           ],
@@ -57,7 +57,7 @@
               ],
               "model": {
                 "type": "minecraft:model",
-                "model": "minecraft:item/plated_foods/plated_pufferfish_3d"
+                "model": "minecraft:item/named_variants/plated_pufferfish_3d"
               }
             }
           ],

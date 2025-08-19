@@ -1,9 +1,10 @@
 {
+	"format_version": "1.21.6",
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
 		"0": "item/glistering_melon_slice_3d",
-		"particle": "item/glistering_melon_slice_particle"
+		"particle": "item/food_particles/glistering_melon_slice"
 	},
 	"elements": [
 		{
