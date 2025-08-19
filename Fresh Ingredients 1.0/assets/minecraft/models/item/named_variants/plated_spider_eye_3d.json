@@ -3,7 +3,7 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "item/spider_eye_3d",
-		"2": "item/plated_food/plate_3d",
+		"2": "item/named_variants/plate_3d",
 		"particle": "item/spider_eye"
 	},
 	"elements": [

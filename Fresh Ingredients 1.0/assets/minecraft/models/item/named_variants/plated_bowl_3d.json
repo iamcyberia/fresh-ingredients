@@ -3,7 +3,7 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "item/bowl_3d",
-		"4": "item/plated_food/plate_3d",
+		"4": "item/named_variants/plate_3d",
 		"particle": "item/bowl_3d"
 	},
 	"elements": [

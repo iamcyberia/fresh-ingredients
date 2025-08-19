@@ -4,7 +4,7 @@
 	"texture_size": [32, 32],
 	"textures": {
 		"0": "item/golden_carrot_3d",
-		"2": "item/plated_food/plate_3d",
+		"2": "item/named_variants/plate_3d",
 		"particle": "item/food_particles/golden_carrot"
 	},
 	"elements": [
