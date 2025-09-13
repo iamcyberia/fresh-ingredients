@@ -1,0 +1,68 @@
+{
+	"format_version": "1.21.6",
+	"credit": "cyberia was here",
+	"parent": "minecraft:item/pottery_sherds/angler_pottery_sherd_3d",
+	"texture_size": [32, 32],
+	"textures": {
+		"3": "item/pottery_sherds/guster_pottery_sherd_3d"
+	},
+	"elements": [
+		{
+			"from": [7.5, 0, 4.75],
+			"to": [8.5, 1, 9.75],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8.5, 0, 13.75]},
+			"faces": {
+				"north": {"uv": [0, 7, 0.5, 7.5], "texture": "#3"},
+				"east": {"uv": [6.5, 3.5, 9, 4], "texture": "#3"},
+				"south": {"uv": [6.5, 6.5, 7, 7], "texture": "#3"},
+				"west": {"uv": [0, 6.5, 2.5, 7], "texture": "#3"},
+				"down": {"uv": [3, 6.5, 2.5, 9], "rotation": 180, "texture": "#3"}
+			}
+		},
+		{
+			"from": [7.5, 1, 4.75],
+			"to": [8.5, 4, 13.75],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8.5, 0, 13.75]},
+			"faces": {
+				"north": {"uv": [6.5, 4, 7, 5.5], "texture": "#3"},
+				"east": {"uv": [5, 0, 9.5, 1.5], "texture": "#3"},
+				"south": {"uv": [4, 6.5, 4.5, 8], "texture": "#3"},
+				"west": {"uv": [0, 5, 4.5, 6.5], "texture": "#3"},
+				"down": {"uv": [6, 3.5, 5.5, 8], "rotation": 180, "texture": "#3"}
+			}
+		},
+		{
+			"from": [7.5, 4, 3.75],
+			"to": [8.5, 9, 13.75],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8.5, 0, 13.75]},
+			"faces": {
+				"north": {"uv": [3.5, 6.5, 4, 9], "texture": "#3"},
+				"east": {"uv": [0, 2.5, 5, 5], "texture": "#3"},
+				"south": {"uv": [3, 6.5, 3.5, 9], "texture": "#3"},
+				"west": {"uv": [0, 0, 5, 2.5], "texture": "#3"},
+				"up": {"uv": [5.5, 8.5, 5, 3.5], "rotation": 180, "texture": "#3"},
+				"down": {"uv": [5, 5, 4.5, 10], "rotation": 180, "texture": "#3"}
+			}
+		},
+		{
+			"from": [7.5, 9, 3.75],
+			"to": [8.5, 11, 9.75],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8.5, 0, 13.75]},
+			"faces": {
+				"north": {"uv": [6, 6.5, 6.5, 7.5], "texture": "#3"},
+				"east": {"uv": [5, 2.5, 8, 3.5], "texture": "#3"},
+				"south": {"uv": [6.5, 5.5, 7, 6.5], "texture": "#3"},
+				"west": {"uv": [5, 1.5, 8, 2.5], "texture": "#3"},
+				"up": {"uv": [6.5, 6.5, 6, 3.5], "rotation": 180, "texture": "#3"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "group",
+			"origin": [8.5, 0, 13.75],
+			"color": 0,
+			"children": [0, 1, 2, 3]
+		}
+	]
+}
