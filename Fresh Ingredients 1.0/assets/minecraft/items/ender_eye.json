@@ -11,15 +11,6 @@
           "gui",
           "fixed"
         ]
-      },
-      {
-        "when": [
-          "ground"
-        ],
-        "model": {
-          "type": "minecraft:model",
-          "model": "minecraft:item/ender_eye_throw"
-        }
       }
     ],
     "fallback": {
