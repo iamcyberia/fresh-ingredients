@@ -1,0 +1,9 @@
+{
+    id: "FreshIngredients",
+    version: 12,
+    capabilities: ["FileFilter", "DirFilter"],
+    conf: {
+        UseModelsWhenDropped: true,
+        Outlines: true
+    }
+}
