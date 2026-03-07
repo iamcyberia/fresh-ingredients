@@ -134,9 +134,10 @@ end
 
 if (
 	I:isOf(item, Items:get("minecraft:ender_eye")) or
-	I:isOf(item, Items:get("minecraft:ender_pearl")) 
+	I:isOf(item, Items:get("minecraft:ender_pearl")) or
+	I:isOf(item, Items:get("minecraft:nether_star"))
 ) then
-    M:moveY(matrices, 0.075 * M:sin(timeSpent * 0.05))
+    M:moveY(matrices, 0.075 * M:sin(timeSpent * 0.025))
     M:rotateY(matrices, 0 * timeSpent * 0.1)
 end
 
@@ -154,6 +155,21 @@ if (
 
 	M:scale(matrices, 1.1, 1.1, 1.1)
 end
+
+if (
+	I:isOf(item, Items:get("minecraft:nether_star"))
+) then
+	M:moveY(matrices, 0.4)
+	M:moveX(matrices, -0.05 * l)
+	M:moveZ(matrices, 0.1)
+	
+	M:rotateX(matrices, 80)
+	M:rotateY(matrices, 0 * l)
+	M:rotateZ(matrices, 20 * l)
+
+	M:scale(matrices, 1.1, 1.1, 1.1)
+end
+
 
 -- Shulker Shell
 if (
@@ -322,7 +338,6 @@ end
 
 -- Inc Sac Glow
 if (
-	I:isOf(item, Items:get("minecraft:ink_sac")) or
 	I:isOf(item, Items:get("minecraft:glow_ink_sac"))
 ) then
     particleManager:addParticle(
@@ -392,8 +407,6 @@ if (
 	M:rotateX(matrices, -52.5)
 	M:rotateY(matrices, 180 * l)
 	M:rotateZ(matrices, 180 * l)
-
-	M:moveZ(matrices, 0.3 * easedFoodCounter)
 
 	M:scale(matrices, 1.1, 1.1, 1.1)
 end
@@ -482,4 +495,35 @@ if (
 	M:moveX(matrices, 0 * l)
 	
 	M:rotateX(matrices, -67)
+end
+
+-- Smithing Templates
+if (
+	I:isOf(item, Items:get("minecraft:sentry_armor_trim_smithing_template")) or
+	I:isOf(item, Items:get("minecraft:vex_armor_trim_smithing_template")) or
+	I:isOf(item, Items:get("minecraft:wild_armor_trim_smithing_template")) or
+	I:isOf(item, Items:get("minecraft:coast_armor_trim_smithing_template")) or
+	I:isOf(item, Items:get("minecraft:dune_armor_trim_smithing_template")) or
+	I:isOf(item, Items:get("minecraft:wayfinder_armor_trim_smithing_template")) or
+	I:isOf(item, Items:get("minecraft:raiser_armor_trim_smithing_template")) or
+	I:isOf(item, Items:get("minecraft:shaper_armor_trim_smithing_template")) or
+	I:isOf(item, Items:get("minecraft:host_armor_trim_smithing_template")) or
+	I:isOf(item, Items:get("minecraft:ward_armor_trim_smithing_template")) or
+	I:isOf(item, Items:get("minecraft:silence_armor_trim_smithing_template")) or
+	I:isOf(item, Items:get("minecraft:tide_armor_trim_smithing_template")) or
+	I:isOf(item, Items:get("minecraft:snout_armor_trim_smithing_template")) or
+	I:isOf(item, Items:get("minecraft:rib_armor_trim_smithing_template")) or
+	I:isOf(item, Items:get("minecraft:eye_armor_trim_smithing_template")) or
+	I:isOf(item, Items:get("minecraft:spire_armor_trim_smithing_template")) or
+	I:isOf(item, Items:get("minecraft:flow_armor_trim_smithing_template")) or
+	I:isOf(item, Items:get("minecraft:bolt_armor_trim_smithing_template")) or
+	I:isOf(item, Items:get("minecraft:netherite_upgrade_smithing_template"))
+) then
+	M:moveX(matrices, -0.05 * l)
+	M:moveY(matrices, 0.0125)
+	M:moveZ(matrices, 0.15)
+	
+	M:rotateX(matrices, -20)
+	M:rotateY(matrices, -40 * l)
+	M:rotateZ(matrices, 0 * l)
 end

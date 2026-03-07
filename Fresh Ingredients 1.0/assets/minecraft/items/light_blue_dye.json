@@ -17,7 +17,7 @@
     ],
     "fallback": {
       "type": "minecraft:model",
-      "model": "minecraft:item/light_blue_dye_3d"
+      "model": "minecraft:item/dyes/light_blue_dye_3d"
     }
   }
 }

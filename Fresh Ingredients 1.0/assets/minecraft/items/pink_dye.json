@@ -17,7 +17,7 @@
     ],
     "fallback": {
       "type": "minecraft:model",
-      "model": "minecraft:item/pink_dye_3d"
+      "model": "minecraft:item/dyes/pink_dye_3d"
     }
   }
 }

@@ -1,11 +1,11 @@
 {
 	"format_version": "1.21.6",
-	"credit": "Made with Blockbench",
+	"credit": "BennyMcCarthy was here",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "item/dye_plate_3d",
-		"1": "item/light_gray_dye_3d",
-		"particle": "item/dye_plate_3d"
+		"0": "item/dyes/dye_plate_3d",
+		"1": "item/dyes/light_gray_dye_3d",
+		"particle": "item/dyes/dye_plate_3d"
 	},
 	"elements": [
 		{

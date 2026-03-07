@@ -17,7 +17,7 @@
     ],
     "fallback": {
       "type": "minecraft:model",
-      "model": "minecraft:item/brown_dye_3d"
+      "model": "minecraft:item/dyes/brown_dye_3d"
     }
   }
 }
