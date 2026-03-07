@@ -214,7 +214,7 @@ if (
         0, 
         0, 
         1.25, 
-        Texture:of("minecraft", "textures/particle/glow.png"), 
+        Texture:of("minecraft", "textures/particle/fresh_glow.png"), 
         "ITEM", 
         hand, 
         "SPAWN", 
@@ -318,6 +318,37 @@ if (
 	M:rotateZ(matrices, 90 * l)
 
 	M:scale(matrices, 1.3, 1.3, 1.3)
+end
+
+-- Inc Sac Glow
+if (
+	I:isOf(item, Items:get("minecraft:ink_sac")) or
+	I:isOf(item, Items:get("minecraft:glow_ink_sac"))
+) then
+    particleManager:addParticle(
+        particles, 
+        false, 
+        0.05 * l, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        1.1, 
+        Texture:of("minecraft", "textures/particle/glow_ink_sac_glow.png"), 
+        "ITEM", 
+        hand, 
+        "SPAWN", 
+        "ADDITIVE", 
+        0, 
+        200 + (20 * M:sin(P:getAge(player) * 0.2))
+    )
 end
 
 -- Nautilus Shell
@@ -425,4 +456,30 @@ if (
 	M:rotateZ(matrices, 0 * l)
 
 	M:scale(matrices, 0.85, 0.85, 0.85)
+end
+
+-- Dyes
+if (
+	I:isOf(item, Items:get("minecraft:black_dye")) or
+	I:isOf(item, Items:get("minecraft:blue_dye")) or
+	I:isOf(item, Items:get("minecraft:brown_dye")) or
+	I:isOf(item, Items:get("minecraft:cyan_dye")) or
+	I:isOf(item, Items:get("minecraft:gray_dye")) or
+	I:isOf(item, Items:get("minecraft:green_dye")) or
+	I:isOf(item, Items:get("minecraft:light_blue_dye")) or
+	I:isOf(item, Items:get("minecraft:light_gray_dye")) or
+	I:isOf(item, Items:get("minecraft:lime_dye")) or
+	I:isOf(item, Items:get("minecraft:magenta_dye")) or
+	I:isOf(item, Items:get("minecraft:orange_dye")) or
+	I:isOf(item, Items:get("minecraft:pink_dye")) or
+	I:isOf(item, Items:get("minecraft:purple_dye")) or
+	I:isOf(item, Items:get("minecraft:red_dye")) or
+	I:isOf(item, Items:get("minecraft:white_dye")) or
+	I:isOf(item, Items:get("minecraft:yellow_dye"))
+) then
+	M:moveY(matrices, 0)
+	M:moveZ(matrices, 0.2)
+	M:moveX(matrices, 0 * l)
+	
+	M:rotateX(matrices, -67)
 end

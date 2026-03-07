@@ -1,5 +1,5 @@
 {
-	"format_version": "1.21.6",
+	"format_version": "1.21.11",
 	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "item/feather_3d",
@@ -7,9 +7,22 @@
 	},
 	"elements": [
 		{
-			"from": [5.5, 8, 7.69612],
-			"to": [10.5, 15, 7.69612],
-			"rotation": {"angle": 10, "axis": "x", "origin": [8, 8, 7.69612]},
+			"from": [7.5, 7.8638, 7.49713],
+			"to": [8.5, 12.9638, 7.99713],
+			"rotation": {"angle": 10, "axis": "x", "origin": [8, 8.22341, 8]},
+			"faces": {
+				"north": {"uv": [2, 2, 3, 7], "texture": "#0"},
+				"east": {"uv": [2, 2, 3, 7], "texture": "#0"},
+				"south": {"uv": [2, 2, 3, 7], "texture": "#0"},
+				"west": {"uv": [2, 2, 3, 7], "texture": "#0"},
+				"up": {"uv": [2, 2, 3, 3], "texture": "#0"},
+				"down": {"uv": [0, 0, 1, 1], "texture": "#0"}
+			}
+		},
+		{
+			"from": [5.5, 7.95063, 7.73953],
+			"to": [10.5, 14.95063, 7.73953],
+			"rotation": {"angle": 10, "axis": "x", "origin": [8, 8.22341, 8]},
 			"faces": {
 				"north": {"uv": [0, 0, 5, 7], "texture": "#0"},
 				"east": {"uv": [0, 0, 0, 7], "texture": "#0"},
@@ -22,7 +35,7 @@
 		{
 			"from": [5.5, 2, 7.69612],
 			"to": [10.5, 8, 7.69612],
-			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 7.69612]},
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8.22341, 8]},
 			"faces": {
 				"north": {"uv": [0, 7, 5, 13], "texture": "#0"},
 				"east": {"uv": [0, 0, 0, 6], "texture": "#0"},
@@ -35,7 +48,7 @@
 		{
 			"from": [7.49, 1.99, 7.43612],
 			"to": [8.51, 8.01, 7.95612],
-			"rotation": {"angle": 0, "axis": "y", "origin": [7.5, 2, 7.19612]},
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8.22341, 8]},
 			"faces": {
 				"north": {"uv": [2, 7, 3, 13], "texture": "#0"},
 				"east": {"uv": [2, 7, 3, 13], "texture": "#0"},
@@ -44,21 +57,9 @@
 				"up": {"uv": [2, 8, 3, 9], "texture": "#0"},
 				"down": {"uv": [2, 12, 3, 13], "texture": "#0"}
 			}
-		},
-		{
-			"from": [7.5, 8, 7.44612],
-			"to": [8.5, 13.1, 7.94612],
-			"rotation": {"angle": 10, "axis": "x", "origin": [7.5, 8, 7.19612]},
-			"faces": {
-				"north": {"uv": [2, 2, 3, 7], "texture": "#0"},
-				"east": {"uv": [2, 2, 3, 7], "texture": "#0"},
-				"south": {"uv": [2, 2, 3, 7], "texture": "#0"},
-				"west": {"uv": [2, 2, 3, 7], "texture": "#0"},
-				"up": {"uv": [2, 2, 3, 3], "texture": "#0"},
-				"down": {"uv": [0, 0, 1, 1], "texture": "#missing"}
-			}
 		}
 	],
+	"gui_light": "front",
 	"display": {
 		"thirdperson_righthand": {
 			"rotation": [10, 0, 0],
@@ -99,5 +100,13 @@
 			"translation": [-0.5, -0.5, 0],
 			"scale": [1.24219, 1.24219, 1.24219]
 		}
-	}
+	},
+	"groups": [
+		{
+			"name": "feather",
+			"origin": [7.5, 2, 7.19612],
+			"color": 0,
+			"children": [0, 1, 2, 3]
+		}
+	]
 }
