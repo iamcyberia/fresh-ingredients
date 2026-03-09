@@ -5,19 +5,21 @@
     "cases": [
       {
         "when": [
-          "gui",
-          "fixed",
-          "ground"
+          "firstperson_righthand",
+          "firstperson_lefthand",
+          "thirdperson_righthand",
+          "thirdperson_lefthand",
+          "head"
         ],
         "model": {
           "type": "minecraft:model",
-          "model": "minecraft:item/lime_dye"
+          "model": "minecraft:item/dyes/lime_dye_3d"
         }
       }
     ],
     "fallback": {
       "type": "minecraft:model",
-      "model": "minecraft:item/dyes/lime_dye_3d"
+      "model": "minecraft:item/lime_dye"
     }
   }
 }

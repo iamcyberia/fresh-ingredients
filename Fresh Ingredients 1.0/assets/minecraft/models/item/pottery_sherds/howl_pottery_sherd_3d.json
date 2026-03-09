@@ -1,0 +1,9 @@
+{
+	"format_version": "1.21.6",
+	"credit": "cyberia was here",
+	"parent": "minecraft:item/pottery_sherds/angler_pottery_sherd_3d",
+	"texture_size": [32, 32],
+	"textures": {
+		"3": "item/pottery_sherds/howl_pottery_sherd_3d"
+	}
+}

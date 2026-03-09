@@ -46,7 +46,26 @@ if (
 	I:isOf(item, Items:get("minecraft:angler_pottery_sherd")) or
 	I:isOf(item, Items:get("minecraft:archer_pottery_sherd")) or
 	I:isOf(item, Items:get("minecraft:arms_up_pottery_sherd")) or
-	I:isOf(item, Items:get("minecraft:brewer_pottery_sherd"))
+	I:isOf(item, Items:get("minecraft:blade_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:brewer_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:burn_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:danger_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:explorer_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:flow_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:friend_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:guster_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:heart_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:heartbreak_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:howl_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:miner_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:mourner_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:plenty_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:prize_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:scrape_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:sheaf_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:shelter_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:skull_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:snort_pottery_sherd"))
 ) then
 	M:moveY(matrices, 0.05)
 	M:moveX(matrices, 0 * l)
