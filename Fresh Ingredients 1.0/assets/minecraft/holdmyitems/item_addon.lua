@@ -118,6 +118,44 @@ if (
     )
 end
 
+-- Blaze Powder
+if (
+	I:isOf(item, Items:get("minecraft:blaze_powder"))
+) then
+	M:moveY(matrices, 0.09)
+	M:moveZ(matrices, 0.21)
+	M:moveX(matrices, -0.05 * l)
+		
+	M:rotateX(matrices, -45)
+	
+	M:scale(matrices, 1.3, 1.3, 1.3)
+    
+    particleManager:addParticle(
+        particles, 
+        false, 
+        0.1 * l, 
+        0.05, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        1.5, 
+        Texture:of("minecraft", "textures/particle/glowstone_glow.png"), 
+        "ITEM", 
+        hand, 
+        "SPAWN", 
+        "ADDITIVE", 
+        0, 
+        150 + (20 * M:sin(P:getAge(player) * 0.2))
+    )
+end
+
 -- Breeze Rod, Stick
 if (
 	I:isOf(item, Items:get("minecraft:breeze_rod")) or
@@ -545,4 +583,19 @@ if (
 	M:rotateX(matrices, -20)
 	M:rotateY(matrices, -40 * l)
 	M:rotateZ(matrices, 0 * l)
+end
+
+-- Paper
+if (
+	I:isOf(item, Items:get("minecraft:paper"))
+) then
+	M:moveX(matrices, 0 * l)
+	M:moveY(matrices, 0)
+	M:moveZ(matrices, 0)
+	
+	M:rotateX(matrices, 30)
+	M:rotateY(matrices, 0 * l)
+	M:rotateZ(matrices, 0 * l)
+
+	M:scale(matrices, 1.3, 1.3, 1.3)
 end

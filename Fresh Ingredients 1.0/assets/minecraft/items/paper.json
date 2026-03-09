@@ -13,13 +13,13 @@
         ],
         "model": {
           "type": "minecraft:model",
-          "model": "minecraft:item/ink_sac_3d"
+          "model": "minecraft:item/paper_3d"
         }
       }
     ],
     "fallback": {
       "type": "minecraft:model",
-      "model": "minecraft:item/ink_sac"
+      "model": "minecraft:item/paper"
     }
   }
 }

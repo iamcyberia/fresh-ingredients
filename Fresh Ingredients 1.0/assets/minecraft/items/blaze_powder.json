@@ -5,8 +5,24 @@
     "cases": [
       {
         "when": [
-          "firstperson_righthand",
-          "firstperson_lefthand",
+          "firstperson_righthand"
+        ],
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/blaze_powder_3d_right"
+        }
+      },
+      {
+        "when": [
+          "firstperson_lefthand"
+        ],
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/blaze_powder_3d_left"
+        }
+      },
+      {
+        "when": [
           "thirdperson_righthand",
           "thirdperson_lefthand",
           "head"
