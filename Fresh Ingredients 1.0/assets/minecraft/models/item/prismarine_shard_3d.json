@@ -1,0 +1,102 @@
+{
+	"format_version": "1.21.11",
+	"credit": "cyberia was here",
+	"textures": {
+		"1": "item/prismarine_shard_3d"
+	},
+	"elements": [
+		{
+			"from": [5, 7, 10],
+			"to": [11, 9, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [5, 7, 10]},
+			"faces": {
+				"north": {"uv": [4, 6, 10, 8], "texture": "#1"},
+				"east": {"uv": [10, 8, 13, 10], "texture": "#1"},
+				"south": {"uv": [6, 4, 12, 6], "texture": "#1"},
+				"west": {"uv": [10, 10, 13, 12], "texture": "#1"},
+				"up": {"uv": [6, 3, 0, 0], "texture": "#1"},
+				"down": {"uv": [6, 3, 0, 6], "texture": "#1"}
+			}
+		},
+		{
+			"from": [8, 7, 3],
+			"to": [11, 9, 6],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 7, 2]},
+			"faces": {
+				"north": {"uv": [4, 11, 7, 13], "texture": "#1"},
+				"east": {"uv": [7, 11, 10, 13], "texture": "#1"},
+				"south": {"uv": [0, 12, 3, 14], "texture": "#1"},
+				"west": {"uv": [12, 4, 15, 6], "texture": "#1"},
+				"up": {"uv": [7, 11, 4, 8], "texture": "#1"},
+				"down": {"uv": [10, 8, 7, 11], "texture": "#1"}
+			}
+		},
+		{
+			"from": [7, 7, 6],
+			"to": [11, 9, 10],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 7, 9]},
+			"faces": {
+				"north": {"uv": [0, 10, 4, 12], "texture": "#1"},
+				"east": {"uv": [10, 0, 14, 2], "texture": "#1"},
+				"south": {"uv": [10, 2, 14, 4], "texture": "#1"},
+				"west": {"uv": [10, 6, 14, 8], "texture": "#1"},
+				"up": {"uv": [4, 10, 0, 6], "texture": "#1"},
+				"down": {"uv": [10, 0, 6, 4], "texture": "#1"}
+			}
+		}
+	],
+	"gui_light": "front",
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [45, 0, -90],
+			"translation": [0, 1, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [45, 0, 90],
+			"translation": [0, 1, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_righthand": {
+			"rotation": [77, -24, 61],
+			"translation": [4.75, 2.25, -3],
+			"scale": [0.75, 0.75, 0.75]
+		},
+		"firstperson_lefthand": {
+			"rotation": [70, -24, 61],
+			"translation": [4.75, 2.25, -3],
+			"scale": [0.75, 0.75, 0.75]
+		},
+		"ground": {
+			"translation": [0, -1.25, 0]
+		},
+		"gui": {
+			"rotation": [30, -135, 0],
+			"translation": [1.25, 0, 0],
+			"scale": [1.35, 1.35, 1.35]
+		},
+		"head": {
+			"rotation": [90, 0, -90],
+			"translation": [0, 10, 0],
+			"scale": [1.25, 1.25, 1.25]
+		},
+		"fixed": {
+			"rotation": [90, -45, -180],
+			"translation": [0, 0, 1],
+			"scale": [1.25, 1.25, 1.25]
+		},
+		"on_shelf": {
+			"rotation": [90, 0, 0],
+			"translation": [0, 0, -2.5],
+			"scale": [1.64, 1.64, 1.64]
+		}
+	},
+	"groups": [
+		{
+			"name": "prismarine_shard",
+			"origin": [5, 7, 10],
+			"color": 0,
+			"children": [0, 1, 2]
+		}
+	]
+}

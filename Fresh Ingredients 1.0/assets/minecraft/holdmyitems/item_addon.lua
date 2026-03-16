@@ -108,7 +108,7 @@ if (
         0, 
         0, 
         1.5, 
-        Texture:of("minecraft", "textures/particle/glowstone_glow.png"), 
+        Texture:of("minecraft", "textures/particle/fresh_glow.png"), 
         "ITEM", 
         hand, 
         "SPAWN", 
@@ -146,7 +146,7 @@ if (
         0, 
         0, 
         1.5, 
-        Texture:of("minecraft", "textures/particle/glowstone_glow.png"), 
+        Texture:of("minecraft", "textures/particle/fresh_glow.png"), 
         "ITEM", 
         hand, 
         "SPAWN", 
@@ -325,7 +325,7 @@ if (
         0, 
         0, 
         1.1, 
-        Texture:of("minecraft", "textures/particle/glowstone_glow.png"), 
+        Texture:of("minecraft", "textures/particle/fresh_glow.png"), 
         "ITEM", 
         hand, 
         "SPAWN", 
@@ -598,4 +598,85 @@ if (
 	M:rotateZ(matrices, 0 * l)
 
 	M:scale(matrices, 1.3, 1.3, 1.3)
+end
+
+-- Prismarine Crystals
+if (
+	I:isOf(item, Items:get("minecraft:prismarine_crystals"))
+) then
+	M:moveY(matrices, 0.03)
+	M:moveZ(matrices, 0.21)
+	M:moveX(matrices, 0 * l)
+	
+	M:rotateX(matrices, -45)
+
+	M:scale(matrices, 1.2, 1.2, 1.2)
+
+	particleManager:addParticle(
+        particles, 
+        false, 
+        0 * l, 
+        0.025, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        1.1, 
+        Texture:of("minecraft", "textures/particle/prismarine_crystals_glow.png"), 
+        "ITEM", 
+        hand, 
+        "SPAWN", 
+        "ADDITIVE", 
+        0, 
+        150 + (20 * M:sin(P:getAge(player) * 0.2))
+    )
+end
+
+-- Prismarine Shard
+if (
+	I:isOf(item, Items:get("minecraft:prismarine_shard"))
+) then
+	M:moveX(matrices, 0 * l)
+	M:moveY(matrices, 0)
+	M:moveZ(matrices, 0.125)
+	
+	M:rotateX(matrices, -45)
+	M:rotateY(matrices, -135 * l)
+	M:rotateZ(matrices, 0 * l)
+
+	M:scale(matrices, 1.5, 1.5, 1.5)
+end
+
+-- Turtle Scute, Turtle Scute
+if (
+	I:isOf(item, Items:get("minecraft:turtle_scute"))
+) then
+	M:moveX(matrices, -0.05 * l)
+	M:moveY(matrices, 0)
+	M:moveZ(matrices, 0.1)
+	
+	M:rotateX(matrices, -20)
+	M:rotateY(matrices, 45 * l)
+	M:rotateZ(matrices, -20 * l)
+
+	M:scale(matrices, 1.125, 1.125, 1.125)
+end
+
+-- Turtle Scute, Armadillo Scute
+if (
+	I:isOf(item, Items:get("minecraft:armadillo_scute"))
+) then
+	M:moveX(matrices, -0.05 * l)
+	M:moveY(matrices, 0.05)
+	M:moveZ(matrices, 0.125)
+	
+	M:rotateX(matrices, -20)
+	M:rotateY(matrices, 45 * l)
+	M:rotateZ(matrices, -20 * l)
 end

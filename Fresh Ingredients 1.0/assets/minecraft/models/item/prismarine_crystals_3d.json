@@ -1,0 +1,107 @@
+{
+	"format_version": "1.21.11",
+	"credit": "cyberia was here",
+	"textures": {
+		"0": "item/prismarine_crystals_3d",
+		"particle": "item/prismarine_crystals_3d"
+	},
+	"elements": [
+		{
+			"from": [4.07787, 0, 7.71764],
+			"to": [8.07787, 2, 10.71764],
+			"shade": false,
+			"light_emission": 10,
+			"rotation": {"angle": 17.5, "axis": "y", "origin": [4.07787, 0, 7.71764]},
+			"faces": {
+				"north": {"uv": [8, 0, 12, 2], "texture": "#0"},
+				"east": {"uv": [4, 9, 7, 11], "texture": "#0"},
+				"south": {"uv": [8, 2, 12, 4], "texture": "#0"},
+				"west": {"uv": [7, 10, 10, 12], "texture": "#0"},
+				"up": {"uv": [4, 3, 0, 0], "texture": "#0"},
+				"down": {"uv": [4, 3, 0, 6], "texture": "#0"}
+			}
+		},
+		{
+			"from": [7.32787, 1.875, 8.21764],
+			"to": [11.32787, 3.875, 11.21764],
+			"shade": false,
+			"light_emission": 10,
+			"rotation": {"angle": -27.5, "axis": "z", "origin": [7.32787, 1.875, 8.21764]},
+			"faces": {
+				"north": {"uv": [8, 4, 12, 6], "texture": "#0"},
+				"east": {"uv": [10, 10, 13, 12], "texture": "#0"},
+				"south": {"uv": [8, 6, 12, 8], "texture": "#0"},
+				"west": {"uv": [0, 11, 3, 13], "texture": "#0"},
+				"up": {"uv": [8, 3, 4, 0], "texture": "#0"},
+				"down": {"uv": [8, 3, 4, 6], "texture": "#0"}
+			}
+		},
+		{
+			"from": [10.07787, 0, 5.21764],
+			"to": [14.07787, 2, 8.21764],
+			"shade": false,
+			"light_emission": 10,
+			"rotation": {"x": -90, "y": -55, "z": 90, "origin": [10.07787, 0, 5.21764]},
+			"faces": {
+				"north": {"uv": [8, 8, 12, 10], "texture": "#0"},
+				"east": {"uv": [3, 11, 6, 13], "texture": "#0"},
+				"south": {"uv": [0, 9, 4, 11], "texture": "#0"},
+				"west": {"uv": [12, 0, 15, 2], "texture": "#0"},
+				"up": {"uv": [4, 9, 0, 6], "texture": "#0"},
+				"down": {"uv": [8, 6, 4, 9], "texture": "#0"}
+			}
+		}
+	],
+	"gui_light": "front",
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [57, 0, 0],
+			"translation": [-0.25, 2.75, 3],
+			"scale": [0.55, 0.55, 0.55]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [57, 0, 0],
+			"translation": [0.25, 2.75, 3],
+			"scale": [0.55, 0.55, 0.55]
+		},
+		"firstperson_righthand": {
+			"rotation": [-180, 80, -180],
+			"translation": [2, 7.5, -2.25]
+		},
+		"firstperson_lefthand": {
+			"rotation": [-180, 80, -180],
+			"translation": [2, 7.5, -2.25]
+		},
+		"ground": {
+			"translation": [0, 3, 0],
+			"scale": [0.55, 0.55, 0.55]
+		},
+		"gui": {
+			"rotation": [-145, 55, -180],
+			"translation": [0, 7, 0],
+			"scale": [1.5, 1.5, 1.5]
+		},
+		"head": {
+			"rotation": [0, -36, 0],
+			"translation": [0, 14.5, -0.75]
+		},
+		"fixed": {
+			"rotation": [-90, -35.25, 0],
+			"translation": [0.5, -1, -11],
+			"scale": [1.5, 1.5, 1.5]
+		},
+		"on_shelf": {
+			"rotation": [-180, 39.75, -180],
+			"translation": [0, 0, -0.25],
+			"scale": [1.95508, 1.95508, 1.95508]
+		}
+	},
+	"groups": [
+		{
+			"name": "prismarine_crystal",
+			"origin": [4, 7, 8.5],
+			"color": 0,
+			"children": [0, 1, 2]
+		}
+	]
+}

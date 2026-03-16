@@ -1,0 +1,11 @@
+{
+	"format_version": "1.21.6",
+	"credit": "cyberia was here",
+	"parent": "minecraft:item/boats/acacia_chest_boat_3d",
+	"texture_size": [32, 32],
+	"textures": {
+		"1": "item/boats/spruce_boat_3d",
+		"2": "item/boats/boat_chest_3d",
+		"particle": "item/boats/spruce_boat_3d"
+	}
+}
