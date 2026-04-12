@@ -1,0 +1,684 @@
+-- Cyber was here :3
+
+local l = context.bl and 1 or -1
+local matrices = context.matrices
+local item = context.item
+local particles = context.particles
+local hand = context.hand
+local player = context.player
+local timeSpent = context.timeSpent
+local deltaTime = context.deltaTime
+local floating = context.floating
+
+-- Keep custom global variable assignments using dot notation
+
+global.timeSpent = 0.0;
+
+global.floating = 0.0;
+
+timeSpent = timeSpent + deltaTime * 30
+
+if timeSpent > 100000 then
+    timeSpent = 0
+end
+
+renderAsBlock:put("minecraft:nether_wart", false)
+
+-- Egg, Brown Egg, Blue Egg
+if (
+	I:isOf(item, Items:get("minecraft:egg")) or
+	I:isOf(item, Items:get("minecraft:brown_egg")) or
+	I:isOf(item, Items:get("minecraft:blue_egg"))
+) then
+	M:moveY(matrices, 0.1)
+	M:moveX(matrices, 0 * l)
+	M:moveZ(matrices, 0.125)
+	
+	M:rotateX(matrices, -60)
+	M:rotateY(matrices, 0 * l)
+	M:rotateZ(matrices, 0 * l)
+
+	M:scale(matrices, 1.1, 1.1, 1.1)
+end
+
+-- Pottery Sherds
+if (
+	I:isOf(item, Items:get("minecraft:angler_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:archer_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:arms_up_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:blade_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:brewer_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:burn_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:danger_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:explorer_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:flow_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:friend_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:guster_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:heart_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:heartbreak_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:howl_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:miner_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:mourner_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:plenty_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:prize_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:scrape_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:sheaf_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:shelter_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:skull_pottery_sherd")) or
+	I:isOf(item, Items:get("minecraft:snort_pottery_sherd"))
+) then
+	M:moveY(matrices, 0.05)
+	M:moveX(matrices, 0 * l)
+	M:moveZ(matrices, 0.05)
+	
+	M:rotateX(matrices, 0)
+	M:rotateY(matrices, -100 * l)
+	M:rotateZ(matrices, 0 * l)
+
+	M:scale(matrices, 1.4, 1.4, 1.4)
+end
+
+-- Blaze Rod
+if (
+	I:isOf(item, Items:get("minecraft:blaze_rod"))
+) then
+	M:moveY(matrices, 0.16)
+	M:moveX(matrices, 0.01 * l)
+	M:moveZ(matrices, 0.025)
+
+	M:rotateX(matrices, -10)
+	M:rotateY(matrices, 0 * l)
+	M:rotateZ(matrices, 0 * l)
+
+	M:scale(matrices, 1.1, 1.1, 1.1)
+    
+    particleManager:addParticle(
+        particles, 
+        false, 
+        0.05 * l, 
+        0.1, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        1.5, 
+        Texture:of("minecraft", "textures/particle/fresh_glow.png"), 
+        "ITEM", 
+        hand, 
+        "SPAWN", 
+        "ADDITIVE", 
+        0, 
+        150 + (20 * M:sin(P:getAge(player) * 0.2))
+    )
+end
+
+-- Blaze Powder
+if (
+	I:isOf(item, Items:get("minecraft:blaze_powder"))
+) then
+	M:moveY(matrices, 0.09)
+	M:moveZ(matrices, 0.21)
+	M:moveX(matrices, -0.05 * l)
+		
+	M:rotateX(matrices, -45)
+	
+	M:scale(matrices, 1.3, 1.3, 1.3)
+    
+    particleManager:addParticle(
+        particles, 
+        false, 
+        0.1 * l, 
+        0.05, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        1.5, 
+        Texture:of("minecraft", "textures/particle/fresh_glow.png"), 
+        "ITEM", 
+        hand, 
+        "SPAWN", 
+        "ADDITIVE", 
+        0, 
+        150 + (20 * M:sin(P:getAge(player) * 0.2))
+    )
+end
+
+-- Breeze Rod, Stick
+if (
+	I:isOf(item, Items:get("minecraft:breeze_rod")) or
+	I:isOf(item, Items:get("minecraft:stick"))
+) then
+	M:moveY(matrices, 0.16)
+	M:moveX(matrices, 0.01 * l)
+	M:moveZ(matrices, 0.025)
+	
+	M:rotateX(matrices, -10)
+	M:rotateY(matrices, 0)
+	M:rotateZ(matrices, 0 * l)
+
+	M:scale(matrices, 1.1, 1.1, 1.1)
+end
+
+-- Bone
+if (
+	I:isOf(item, Items:get("minecraft:bone"))
+) then
+	M:moveY(matrices, 0.125)
+	M:moveX(matrices, 0.01 * l)
+	M:moveZ(matrices, 0.05)
+	
+	M:rotateX(matrices, 0)
+	M:rotateY(matrices, 0 * l)
+	M:rotateZ(matrices, 0 * l)
+
+	M:scale(matrices, 1.1, 1.1, 1.1)
+end
+
+-- Ender Pearl, Ender Eye
+
+if (
+	I:isOf(item, Items:get("minecraft:ender_eye")) or
+	I:isOf(item, Items:get("minecraft:ender_pearl")) or
+	I:isOf(item, Items:get("minecraft:nether_star"))
+) then
+    M:moveY(matrices, 0.075 * M:sin(timeSpent * 0.025))
+    M:rotateY(matrices, 0 * timeSpent * 0.1)
+end
+
+if (
+	I:isOf(item, Items:get("minecraft:ender_eye")) or
+	I:isOf(item, Items:get("minecraft:ender_pearl"))
+) then
+	M:moveY(matrices, 0.4)
+	M:moveX(matrices, 0 * l)
+	M:moveZ(matrices, 0)
+	
+	M:rotateX(matrices, 80)
+	M:rotateY(matrices, 0 * l)
+	M:rotateZ(matrices, 20 * l)
+
+	M:scale(matrices, 1.1, 1.1, 1.1)
+end
+
+if (
+	I:isOf(item, Items:get("minecraft:nether_star"))
+) then
+	M:moveY(matrices, 0.4)
+	M:moveX(matrices, -0.05 * l)
+	M:moveZ(matrices, 0.1)
+	
+	M:rotateX(matrices, 80)
+	M:rotateY(matrices, 0 * l)
+	M:rotateZ(matrices, 20 * l)
+
+	M:scale(matrices, 1.1, 1.1, 1.1)
+end
+
+
+-- Shulker Shell
+if (
+	I:isOf(item, Items:get("minecraft:shulker_shell"))
+) then
+    M:moveY(matrices, 0.075 * M:sin(timeSpent * 0.05))
+    M:rotateY(matrices, 10 * timeSpent * 0.1)
+end
+
+if (
+	I:isOf(item, Items:get("minecraft:shulker_shell"))
+) then
+	M:moveY(matrices, 0.2)
+	M:moveX(matrices, 0 * l)
+	M:moveZ(matrices, 0.1)
+	
+	M:rotateX(matrices, -28)
+	M:rotateY(matrices, 0 * l)
+	M:rotateZ(matrices, 0 * l)
+end
+
+-- Fire Charge, Snowball, Slimeball
+if (
+	I:isOf(item, Items:get("minecraft:fire_charge")) or
+	I:isOf(item, Items:get("minecraft:snowball")) or
+	I:isOf(item, Items:get("minecraft:slime_ball")) or
+	I:isOf(item, Items:get("minecraft:clay_ball")) or
+	I:isOf(item, Items:get("minecraft:magma_cream"))
+) then
+	M:moveY(matrices, 0.075)
+	M:moveX(matrices, 0 * l)
+	M:moveZ(matrices, 0.125)
+	
+	M:rotateX(matrices, -21)
+	M:rotateY(matrices, 0 * l)
+	M:rotateZ(matrices, 0 * l)
+
+	M:scale(matrices, 1.2, 1.2, 1.2)
+end
+
+-- Fire Charge, Magma Cream
+if (
+	I:isOf(item, Items:get("minecraft:fire_charge")) or 
+	I:isOf(item, Items:get("minecraft:magma_cream"))
+) then
+    
+    particleManager:addParticle(
+        particles, 
+        false, 
+        0.05 * l, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        1.25, 
+        Texture:of("minecraft", "textures/particle/fresh_glow.png"), 
+        "ITEM", 
+        hand, 
+        "SPAWN", 
+        "ADDITIVE", 
+        0, 
+        200 + (20 * M:sin(P:getAge(player) * 0.2))
+    )
+end
+
+--Glowstone Dust
+if (
+	I:isOf(item, Items:get("minecraft:glowstone_dust"))
+) then
+	M:moveY(matrices, 0.09)
+	M:moveZ(matrices, 0.21)
+	M:moveX(matrices, -0.05 * l)
+	
+	M:rotateX(matrices, -45)
+
+	M:scale(matrices, 1.3, 1.3, 1.3)
+    
+    particleManager:addParticle(
+        particles, 
+        false, 
+        0 * l, 
+        0.025, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        1.1, 
+        Texture:of("minecraft", "textures/particle/fresh_glow.png"), 
+        "ITEM", 
+        hand, 
+        "SPAWN", 
+        "ADDITIVE", 
+        0, 
+        200 + (20 * M:sin(P:getAge(player) * 0.2))
+    )
+end
+
+-- Sugar, Gunpowder
+if (
+	I:isOf(item, Items:get("minecraft:sugar")) or
+	I:isOf(item, Items:get("minecraft:gunpowder"))
+) then
+	M:moveY(matrices, 0.09)
+	M:moveZ(matrices, 0.21)
+	M:moveX(matrices, -0.05 * l)
+	
+	M:rotateX(matrices, -45)
+
+	M:scale(matrices, 1.3, 1.3, 1.3)
+end
+
+-- Heart of the Sea
+if (
+	I:isOf(item, Items:get("minecraft:heart_of_the_sea"))
+) then
+	M:moveY(matrices, 0.075)
+	M:moveX(matrices, 0 * l)
+	M:moveZ(matrices, 0.125)
+	
+	M:rotateX(matrices, -21)
+	M:rotateY(matrices, 0 * l)
+	M:rotateZ(matrices, 0 * l)
+end
+
+-- Honeycomb
+if (
+	I:isOf(item, Items:get("minecraft:honeycomb"))
+) then
+	M:moveY(matrices, 0.075)
+	M:moveX(matrices, -0.1 * l)
+	M:moveZ(matrices, 0.075)
+	
+	M:rotateX(matrices, -35)
+	M:rotateY(matrices, -120 * l)
+	M:rotateZ(matrices, 180 * l)
+
+	M:scale(matrices, 1, 1, 1)
+end
+
+-- Ink Sac, Glow Ink Sac
+if (
+	I:isOf(item, Items:get("minecraft:ink_sac")) or
+	I:isOf(item, Items:get("minecraft:glow_ink_sac"))
+) then
+	M:moveY(matrices, 0.05)
+	M:moveX(matrices, -0.05 * l)
+	M:moveZ(matrices, 0.05)
+	
+	M:rotateX(matrices, 90)
+	M:rotateY(matrices, -135 * l)
+	M:rotateZ(matrices, 90 * l)
+
+	M:scale(matrices, 1.3, 1.3, 1.3)
+end
+
+-- Inc Sac Glow
+if (
+	I:isOf(item, Items:get("minecraft:glow_ink_sac"))
+) then
+    particleManager:addParticle(
+        particles, 
+        false, 
+        0.05 * l, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        1.1, 
+        Texture:of("minecraft", "textures/particle/glow_ink_sac_glow.png"), 
+        "ITEM", 
+        hand, 
+        "SPAWN", 
+        "ADDITIVE", 
+        0, 
+        200 + (20 * M:sin(P:getAge(player) * 0.2))
+    )
+end
+
+-- Nautilus Shell
+if (
+	I:isOf(item, Items:get("minecraft:nautilus_shell"))
+) then
+	M:moveY(matrices, 0.025)
+	M:moveX(matrices, 0.05 * l)
+	M:moveZ(matrices, 0.05)
+	
+	M:rotateX(matrices, -90)
+	M:rotateY(matrices, 45 * l)
+	M:rotateZ(matrices, 90 * l)
+
+	M:scale(matrices, 1.1, 1.1, 1.1)
+end
+
+-- Nether Wart
+if (
+	I:isOf(item, Items:get("minecraft:nether_wart"))
+) then
+	M:moveY(matrices, 0.05)
+	M:moveX(matrices, -0.1 * l)
+	M:moveZ(matrices, 0.1)
+	
+	M:rotateX(matrices, 0)
+	M:rotateY(matrices, 0 * l)
+	M:rotateZ(matrices, -15 * l)
+
+	M:scale(matrices, 1.3, 1.3, 1.3)
+end
+
+-- Trial Key
+if (
+	I:isOf(item, Items:get("minecraft:trial_key"))
+) then
+	M:moveY(matrices, 0.05)
+	M:moveX(matrices, 0 * l)
+	M:moveZ(matrices, 0)
+	
+	M:rotateX(matrices, -52.5)
+	M:rotateY(matrices, 180 * l)
+	M:rotateZ(matrices, 180 * l)
+
+	M:scale(matrices, 1.1, 1.1, 1.1)
+end
+
+-- Ominous Trial Key
+if (
+	I:isOf(item, Items:get("minecraft:ominous_trial_key"))
+) then
+	M:moveY(matrices, 0.025)
+	M:moveX(matrices, 0 * l)
+	M:moveZ(matrices, 0)
+	
+	M:rotateX(matrices, -52.5)
+	M:rotateY(matrices, 180 * l)
+	M:rotateZ(matrices, 180 * l)
+
+	M:scale(matrices, 1.2, 1.2, 1.2)
+end
+
+-- Rabbit Foot
+if (
+	I:isOf(item, Items:get("minecraft:rabbit_foot"))
+) then
+	M:moveY(matrices, 0.05)
+	M:moveX(matrices, 0.075 * l)
+	M:moveZ(matrices, 0.05)
+	
+	M:rotateX(matrices, -90)
+	M:rotateY(matrices, 45 * l)
+	M:rotateZ(matrices, 90 * l)
+
+	M:scale(matrices, 1.3, 1.3, 1.3)
+end
+
+-- Feather
+if (
+	I:isOf(item, Items:get("minecraft:feather"))
+) then
+	M:moveY(matrices, 0)
+	M:moveX(matrices, 0.075 * l)
+	M:moveZ(matrices, -0.05)
+	
+	M:rotateX(matrices, 0)
+	M:rotateY(matrices, -10 * l)
+	M:rotateZ(matrices, 0 * l)
+
+	M:scale(matrices, 1.2, 1.2, 1.2)
+end
+
+-- Wheat
+if (
+	I:isOf(item, Items:get("minecraft:wheat"))
+) then
+	M:moveY(matrices, 0)
+	M:moveX(matrices, 0 * l)
+	M:moveZ(matrices, 0)
+	
+	M:rotateX(matrices, -65)
+	M:rotateY(matrices, 0 * l)
+	M:rotateZ(matrices, 0 * l)
+
+	M:scale(matrices, 0.85, 0.85, 0.85)
+end
+
+-- Dyes
+if (
+	I:isOf(item, Items:get("minecraft:black_dye")) or
+	I:isOf(item, Items:get("minecraft:blue_dye")) or
+	I:isOf(item, Items:get("minecraft:brown_dye")) or
+	I:isOf(item, Items:get("minecraft:cyan_dye")) or
+	I:isOf(item, Items:get("minecraft:gray_dye")) or
+	I:isOf(item, Items:get("minecraft:green_dye")) or
+	I:isOf(item, Items:get("minecraft:light_blue_dye")) or
+	I:isOf(item, Items:get("minecraft:light_gray_dye")) or
+	I:isOf(item, Items:get("minecraft:lime_dye")) or
+	I:isOf(item, Items:get("minecraft:magenta_dye")) or
+	I:isOf(item, Items:get("minecraft:orange_dye")) or
+	I:isOf(item, Items:get("minecraft:pink_dye")) or
+	I:isOf(item, Items:get("minecraft:purple_dye")) or
+	I:isOf(item, Items:get("minecraft:red_dye")) or
+	I:isOf(item, Items:get("minecraft:white_dye")) or
+	I:isOf(item, Items:get("minecraft:yellow_dye"))
+) then
+	M:moveY(matrices, 0)
+	M:moveZ(matrices, 0.2)
+	M:moveX(matrices, 0 * l)
+	
+	M:rotateX(matrices, -67)
+end
+
+-- Smithing Templates
+if (
+	I:isOf(item, Items:get("minecraft:sentry_armor_trim_smithing_template")) or
+	I:isOf(item, Items:get("minecraft:vex_armor_trim_smithing_template")) or
+	I:isOf(item, Items:get("minecraft:wild_armor_trim_smithing_template")) or
+	I:isOf(item, Items:get("minecraft:coast_armor_trim_smithing_template")) or
+	I:isOf(item, Items:get("minecraft:dune_armor_trim_smithing_template")) or
+	I:isOf(item, Items:get("minecraft:wayfinder_armor_trim_smithing_template")) or
+	I:isOf(item, Items:get("minecraft:raiser_armor_trim_smithing_template")) or
+	I:isOf(item, Items:get("minecraft:shaper_armor_trim_smithing_template")) or
+	I:isOf(item, Items:get("minecraft:host_armor_trim_smithing_template")) or
+	I:isOf(item, Items:get("minecraft:ward_armor_trim_smithing_template")) or
+	I:isOf(item, Items:get("minecraft:silence_armor_trim_smithing_template")) or
+	I:isOf(item, Items:get("minecraft:tide_armor_trim_smithing_template")) or
+	I:isOf(item, Items:get("minecraft:snout_armor_trim_smithing_template")) or
+	I:isOf(item, Items:get("minecraft:rib_armor_trim_smithing_template")) or
+	I:isOf(item, Items:get("minecraft:eye_armor_trim_smithing_template")) or
+	I:isOf(item, Items:get("minecraft:spire_armor_trim_smithing_template")) or
+	I:isOf(item, Items:get("minecraft:flow_armor_trim_smithing_template")) or
+	I:isOf(item, Items:get("minecraft:bolt_armor_trim_smithing_template")) or
+	I:isOf(item, Items:get("minecraft:netherite_upgrade_smithing_template"))
+) then
+	M:moveX(matrices, -0.05 * l)
+	M:moveY(matrices, 0.0125)
+	M:moveZ(matrices, 0.15)
+	
+	M:rotateX(matrices, -20)
+	M:rotateY(matrices, -40 * l)
+	M:rotateZ(matrices, 0 * l)
+end
+
+-- Paper
+if (
+	I:isOf(item, Items:get("minecraft:paper"))
+) then
+	M:moveX(matrices, 0 * l)
+	M:moveY(matrices, 0)
+	M:moveZ(matrices, 0)
+	
+	M:rotateX(matrices, 30)
+	M:rotateY(matrices, 0 * l)
+	M:rotateZ(matrices, 0 * l)
+
+	M:scale(matrices, 1.3, 1.3, 1.3)
+end
+
+-- Prismarine Crystals
+if (
+	I:isOf(item, Items:get("minecraft:prismarine_crystals"))
+) then
+	M:moveY(matrices, 0.03)
+	M:moveZ(matrices, 0.21)
+	M:moveX(matrices, 0 * l)
+	
+	M:rotateX(matrices, -45)
+
+	M:scale(matrices, 1.2, 1.2, 1.2)
+
+	particleManager:addParticle(
+        particles, 
+        false, 
+        0 * l, 
+        0.025, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        1.1, 
+        Texture:of("minecraft", "textures/particle/prismarine_crystals_glow.png"), 
+        "ITEM", 
+        hand, 
+        "SPAWN", 
+        "ADDITIVE", 
+        0, 
+        150 + (20 * M:sin(P:getAge(player) * 0.2))
+    )
+end
+
+-- Prismarine Shard
+if (
+	I:isOf(item, Items:get("minecraft:prismarine_shard"))
+) then
+	M:moveX(matrices, 0 * l)
+	M:moveY(matrices, 0)
+	M:moveZ(matrices, 0.125)
+	
+	M:rotateX(matrices, -45)
+	M:rotateY(matrices, -135 * l)
+	M:rotateZ(matrices, 0 * l)
+
+	M:scale(matrices, 1.5, 1.5, 1.5)
+end
+
+-- Turtle Scute, Turtle Scute
+if (
+	I:isOf(item, Items:get("minecraft:turtle_scute"))
+) then
+	M:moveX(matrices, -0.05 * l)
+	M:moveY(matrices, 0)
+	M:moveZ(matrices, 0.1)
+	
+	M:rotateX(matrices, -20)
+	M:rotateY(matrices, 45 * l)
+	M:rotateZ(matrices, -20 * l)
+
+	M:scale(matrices, 1.125, 1.125, 1.125)
+end
+
+-- Turtle Scute, Armadillo Scute
+if (
+	I:isOf(item, Items:get("minecraft:armadillo_scute"))
+) then
+	M:moveX(matrices, -0.05 * l)
+	M:moveY(matrices, 0.05)
+	M:moveZ(matrices, 0.125)
+	
+	M:rotateX(matrices, -20)
+	M:rotateY(matrices, 45 * l)
+	M:rotateZ(matrices, -20 * l)
+end

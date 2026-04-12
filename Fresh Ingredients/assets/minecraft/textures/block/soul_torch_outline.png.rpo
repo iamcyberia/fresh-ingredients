@@ -1,0 +1,4 @@
+{
+  "condition": "freshTorches.extraOptions.outlines",
+  "fallback": "assets/minecraft/textures/item/alt/no_torch_outline.png"
+}

@@ -1,0 +1,155 @@
+{
+	"format_version": "1.21.6",
+	"credit": "Made with Blockbench",
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "item/blaze_powder_dust_3d",
+		"1": "item/blaze_powder_flame_3d",
+		"particle": "item/blaze_powder_dust_3d"
+	},
+	"elements": [
+		{
+			"from": [6, -0.01, 6],
+			"to": [10, 3.99, 10],
+			"shade": false,
+			"light_emission": 15,
+			"rotation": {"angle": -20, "axis": "y", "origin": [6, 0, 6]},
+			"faces": {
+				"north": {"uv": [0, 0, 2, 2], "texture": "#0"},
+				"east": {"uv": [0, 2, 2, 4], "texture": "#0"},
+				"south": {"uv": [2, 0, 4, 2], "texture": "#0"},
+				"west": {"uv": [2, 2, 4, 4], "texture": "#0"},
+				"up": {"uv": [2, 6, 0, 4], "texture": "#0"},
+				"down": {"uv": [6, 0, 4, 2], "texture": "#0"}
+			}
+		},
+		{
+			"from": [3.25, 0, 6.5],
+			"to": [6.25, 3, 9.5],
+			"shade": false,
+			"light_emission": 15,
+			"rotation": {"angle": -5, "axis": "y", "origin": [3.25, 0, 6.5]},
+			"faces": {
+				"north": {"uv": [5.5, 2, 7, 3.5], "texture": "#0"},
+				"east": {"uv": [3.5, 5.5, 5, 7], "texture": "#0"},
+				"south": {"uv": [0, 6, 1.5, 7.5], "texture": "#0"},
+				"west": {"uv": [6, 0, 7.5, 1.5], "texture": "#0"},
+				"up": {"uv": [8, 5, 6.5, 3.5], "texture": "#0"},
+				"down": {"uv": [6.5, 6.5, 5, 8], "texture": "#0"}
+			}
+		},
+		{
+			"from": [6.5, 0, 4.75],
+			"to": [8.5, 2, 6.75],
+			"shade": false,
+			"light_emission": 15,
+			"rotation": {"angle": -2.5, "axis": "y", "origin": [6.5, 0, 4.75]},
+			"faces": {
+				"north": {"uv": [7, 2.5, 8, 3.5], "texture": "#0"},
+				"east": {"uv": [3, 7, 4, 8], "texture": "#0"},
+				"south": {"uv": [4, 7, 5, 8], "texture": "#0"},
+				"west": {"uv": [6.5, 7, 7.5, 8], "texture": "#0"},
+				"up": {"uv": [1, 8.5, 0, 7.5], "texture": "#0"},
+				"down": {"uv": [8.5, 0, 7.5, 1], "texture": "#0"}
+			}
+		},
+		{
+			"from": [8.8, 0, 8.25],
+			"to": [10.8, 2, 10.25],
+			"shade": false,
+			"light_emission": 15,
+			"rotation": {"angle": 2.5, "axis": "y", "origin": [8.8, 0, 8.25]},
+			"faces": {
+				"north": {"uv": [7.5, 7, 8.5, 8], "texture": "#0"},
+				"east": {"uv": [1, 8, 2, 9], "texture": "#0"},
+				"south": {"uv": [2, 8, 3, 9], "texture": "#0"},
+				"west": {"uv": [8, 2.5, 9, 3.5], "texture": "#0"},
+				"up": {"uv": [4, 9, 3, 8], "texture": "#0"},
+				"down": {"uv": [9, 3.5, 8, 4.5], "texture": "#0"}
+			}
+		},
+		{
+			"from": [3.8, 0, 9.25],
+			"to": [6.8, 2, 11.25],
+			"shade": false,
+			"light_emission": 15,
+			"rotation": {"angle": -10, "axis": "y", "origin": [3.8, 0, 9.25]},
+			"faces": {
+				"north": {"uv": [6.5, 5, 8, 6], "texture": "#0"},
+				"east": {"uv": [4, 8, 5, 9], "texture": "#0"},
+				"south": {"uv": [6.5, 6, 8, 7], "texture": "#0"},
+				"west": {"uv": [8, 4.5, 9, 5.5], "texture": "#0"},
+				"up": {"uv": [3, 8, 1.5, 7], "texture": "#0"},
+				"down": {"uv": [8.5, 1.5, 7, 2.5], "texture": "#0"}
+			}
+		},
+		{
+			"from": [8, 0, 6],
+			"to": [11, 3, 9],
+			"shade": false,
+			"light_emission": 15,
+			"rotation": {"angle": 17.5, "axis": "y", "origin": [8, 0, 6]},
+			"faces": {
+				"north": {"uv": [2, 4, 3.5, 5.5], "texture": "#0"},
+				"east": {"uv": [4, 2, 5.5, 3.5], "texture": "#0"},
+				"south": {"uv": [3.5, 4, 5, 5.5], "texture": "#0"},
+				"west": {"uv": [5, 3.5, 6.5, 5], "texture": "#0"},
+				"up": {"uv": [6.5, 6.5, 5, 5], "texture": "#0"},
+				"down": {"uv": [3.5, 5.5, 2, 7], "texture": "#0"}
+			}
+		},
+		{
+			"name": "flame",
+			"from": [-0.25, 0, 8.25],
+			"to": [15.75, 16, 8.25],
+			"shade": false,
+			"light_emission": 15,
+			"rotation": {"angle": 10, "axis": "y", "origin": [7.75, 0, 8.25]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"east": {"uv": [0, 0, 0, 8], "texture": "#1"},
+				"south": {"uv": [16, 0, 0, 16], "texture": "#1"},
+				"west": {"uv": [0, 0, 0, 8], "texture": "#1"},
+				"up": {"uv": [8, 0, 0, 0], "texture": "#1"},
+				"down": {"uv": [8, 0, 0, 0], "texture": "#1"}
+			}
+		}
+	],
+	"gui_light": "front",
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [57, -180, 0],
+			"translation": [0, 2, 2.25],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [57, -180, 0],
+			"translation": [0, 2, 2.25],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_righthand": {
+			"rotation": [179.18, 32.25, 179.44],
+			"translation": [-0.25, 2.75, 0],
+			"scale": [0.7832, 0.7832, 0.7832]
+		},
+		"firstperson_lefthand": {
+			"rotation": [179.18, 32.25, 179.44],
+			"translation": [-0.25, 2.75, 0],
+			"scale": [0.7832, 0.7832, 0.7832]
+		},
+		"gui": {
+			"rotation": [30, -45, 0],
+			"translation": [1.25, -1.75, 0],
+			"scale": [1.21094, 1.21094, 1.21094]
+		}
+	},
+	"groups": [
+		{
+			"name": "blaze_powder",
+			"origin": [6, 0, 5],
+			"scope": 0,
+			"color": 0,
+			"children": [0, 1, 2, 3, 4, 5, 6]
+		}
+	]
+}
