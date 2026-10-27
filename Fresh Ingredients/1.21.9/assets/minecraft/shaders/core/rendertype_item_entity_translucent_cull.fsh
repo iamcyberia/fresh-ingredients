@@ -1,56 +1,41 @@
 #version 150
 
-#moj_import <minecraft:fog.glsl>
-#moj_import <minecraft:dynamictransforms.glsl>
-
 uniform sampler2D Sampler0;
-in float sphericalVertexDistance;
-in float cylindricalVertexDistance;
-in vec4 lightColor;
-in vec4 rawColor;
-in vec4 vertexColor;
+
 in vec2 texCoord0;
-in vec2 texCoord1;
+in vec4 vertexColor;
+
+uniform vec4 ColorModulator;
+
 out vec4 fragColor;
 
 void main() {
-    vec4 color = texture(Sampler0, texCoord0) * ColorModulator;
+    vec4 texel = texture(Sampler0, texCoord0);
 
-    ivec4 ich = ivec4(round(texelFetch(
-        Sampler0,
-        ivec2(texCoord0 * vec2(textureSize(Sampler0, 0))),
-        0
-    ) * 255));
+    if (texel.a < 0.1) discard;
 
-    switch (ich.a) {
-        case 254:
-            color *= rawColor; 
-            break;
-            
-        case 200:
-        case 253:
-        case 252:
-        case 100:
-        case 50:
-            color *= lightColor;
-            color.rgb *= 0.9;
-            break;
+    ivec2 texSize = textureSize(Sampler0, 0);
+    ivec2 coord = ivec2(texCoord0 * vec2(texSize));
+    texel = texelFetch(Sampler0, coord, 0);
 
-        default:
-            color *= vertexColor;
+    ivec4 pixel = ivec4(texel * 255.0 + 0.5);
+
+    vec4 color = texel;
+
+    bool special = false;
+
+    switch (pixel.a) {
+        case 200: case 252: case 253: case 254: case 250: case 100: case 50:
+            special = true;
             break;
     }
 
-    if (color.a < 0.1) discard;
+    if (special) {
+        color *= ColorModulator;
+        color.rgb *= 0.9;
+    } else {
+        color *= vertexColor;
+    }
 
-    fragColor = apply_fog(
-        color,
-        sphericalVertexDistance,
-        cylindricalVertexDistance,
-        FogEnvironmentalStart,
-        FogEnvironmentalEnd,
-        FogRenderDistanceStart,
-        FogRenderDistanceEnd,
-        FogColor
-    );
+    fragColor = color;
 }

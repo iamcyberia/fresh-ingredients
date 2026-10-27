@@ -1,10 +1,10 @@
 {
   "pack": {
-    "description": "§7by Cyber & Ben",
+    "description": "§7by Cyber, Ben, Tec & OrkaDC",
     "pack_format": 46, 
-    "supported_formats": [46, 84], 
+    "supported_formats": [46, 128], 
     "min_format": 46, 
-    "max_format": 84
+    "max_format": 128
   },
   "overlays": {
     "entries": [
@@ -39,10 +39,18 @@
         "directory": "26.1",
         "formats": { 
           "min_inclusive": 76,
-          "max_inclusive": 84
+          "max_inclusive": 88
         },
         "min_format": 76, 
-        "max_format": 84
+        "max_format": 88
+      },      { 
+        "directory": "26.3",
+        "formats": { 
+          "min_inclusive": 97.1,
+          "max_inclusive": 128
+        },
+        "min_format": 97.1, 
+        "max_format": 128
       }
     ]
   }
