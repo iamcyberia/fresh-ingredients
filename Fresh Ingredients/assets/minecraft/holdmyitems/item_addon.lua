@@ -6,15 +6,22 @@ local item = context.item
 local particles = context.particles
 local hand = context.hand
 local player = context.player
+local mainHand = context.mainHand
 local timeSpent = context.timeSpent
 local deltaTime = context.deltaTime
 local floating = context.floating
 
 -- Keep custom global variable assignments using dot notation
 
+global.pitchAngle = 0.0;
+global.yawAngle = 0.0;
+global.pitchAngleO = 0.0;
+global.yawAngleO = 0.0;
 global.timeSpent = 0.0;
-
 global.floating = 0.0;
+
+local ywAngle = (mainHand and yawAngle) or yawAngleO
+local ptAngle = (mainHand and pitchAngle) or pitchAngleO
 
 timeSpent = timeSpent + deltaTime * 30
 
@@ -364,9 +371,10 @@ if (
 	M:rotateZ(matrices, 0 * l)
 end
 
--- Honeycomb
+-- Honeycomb, Phantom Membrane
 if (
-	I:isOf(item, Items:get("minecraft:honeycomb"))
+	I:isOf(item, Items:get("minecraft:honeycomb")) or
+	I:isOf(item, Items:get("minecraft:phantom_membrane"))
 ) then
 	M:moveY(matrices, 0.075)
 	M:moveX(matrices, -0.1 * l)
@@ -681,4 +689,29 @@ if (
 	M:rotateX(matrices, -20)
 	M:rotateY(matrices, 45 * l)
 	M:rotateZ(matrices, -20 * l)
+end
+
+-- Banner Patterns
+if ( 
+	I:isOf(item, Items:get("minecraft:bordure_indented_banner_pattern")) or
+	I:isOf(item, Items:get("minecraft:field_masoned_banner_pattern")) or
+	I:isOf(item, Items:get("minecraft:flower_banner_pattern")) or
+	I:isOf(item, Items:get("minecraft:creeper_banner_pattern")) or
+	I:isOf(item, Items:get("minecraft:skull_banner_pattern")) or
+	I:isOf(item, Items:get("minecraft:mojang_banner_pattern")) or
+	I:isOf(item, Items:get("minecraft:globe_banner_pattern")) or
+	I:isOf(item, Items:get("minecraft:piglin_banner_pattern")) or
+	I:isOf(item, Items:get("minecraft:flow_banner_pattern")) or
+	I:isOf(item, Items:get("minecraft:guster_banner_pattern"))
+) then
+    M:moveY(matrices, -0.2)
+	M:moveZ(matrices, -0.025)
+    M:moveX(matrices, 0.05 * l)
+
+    M:rotateX(matrices, -75)
+
+	M:rotateX(matrices, M:clamp(P:getPitch(player) / 2.5, -20, 90) + ptAngle)
+	M:rotateZ(matrices, ywAngle * 0.5, 0, -0.13, 0)
+
+	M:scale(matrices, 1.125, 1.125, 1.125)
 end

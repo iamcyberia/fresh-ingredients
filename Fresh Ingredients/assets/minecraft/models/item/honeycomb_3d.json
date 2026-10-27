@@ -450,6 +450,7 @@
 			}
 		}
 	],
+	"gui_light": "front",
 	"display": {
 		"thirdperson_righthand": {
 			"rotation": [90, 0, 90],
@@ -484,12 +485,18 @@
 		"fixed": {
 			"rotation": [-90, 0, 0],
 			"translation": [0, -0.5, 0.5]
+		},
+		"on_shelf": {
+			"rotation": [90, 0, 0],
+			"translation": [0, 2, 0],
+			"scale": [1.34375, 1.34375, 1.34375]
 		}
 	},
 	"groups": [
 		{
 			"name": "group",
 			"origin": [3, 0, 9],
+			"scope": 0,
 			"color": 0,
 			"children": [
 				0,
@@ -515,12 +522,14 @@
 				{
 					"name": "Inner",
 					"origin": [7, 0, 8],
+					"scope": 0,
 					"color": 0,
 					"children": [20, 21, 22, 23, 24, 25, 26]
 				},
 				{
 					"name": "clear",
 					"origin": [4, 8, 5],
+					"scope": 0,
 					"color": 0,
 					"children": [27, 28, 29, 30, 31, 32, 33]
 				}

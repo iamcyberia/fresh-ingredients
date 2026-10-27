@@ -1,0 +1,10 @@
+{
+	"format_version": "1.21.11",
+	"credit": "cyberia was here",
+	"parent": "minecraft:item/banner_patterns/banner_pattern_template",
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "item/banner_patterns/mojang_banner_pattern_3d",
+		"particle": "item/banner_patterns/mojang_banner_pattern_3d"
+	}
+}

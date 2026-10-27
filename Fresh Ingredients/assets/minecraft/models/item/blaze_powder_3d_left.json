@@ -4,17 +4,17 @@
 	"texture_size": [32, 32],
 	"textures": {
 		"0": "item/blaze_powder_dust_3d",
-		"1": "item/blaze_powder_flame_3d",
+		"1": "item/blaze_fire_sparks",
 		"particle": "item/blaze_powder_dust_3d"
 	},
 	"elements": [
 		{
 			"name": "flame",
-			"from": [0.67069, -0.9, 12.60143],
-			"to": [18.27069, 16.7, 12.60143],
+			"from": [3.25302, 0.075, 11.95107],
+			"to": [16.45302, 13.275, 11.95107],
 			"shade": false,
 			"light_emission": 15,
-			"rotation": {"angle": -10, "axis": "y", "origin": [8.7524, 4.2, 9.23383]},
+			"rotation": {"angle": -10, "axis": "y", "origin": [9.3143, 3.9, 9.42537]},
 			"faces": {
 				"north": {"uv": [16, 0, 0, 16], "texture": "#1"},
 				"east": {"uv": [0, 0, 0, 8], "texture": "#1"},
